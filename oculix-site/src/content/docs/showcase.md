@@ -70,4 +70,4 @@ Trademarks are property of their respective owners. Inclusion in this list does 
 
 If your team relies on OculiX in production, we'd love to hear about it (even off the record). It helps us prioritize the roadmap and gives smaller adopters a sense of who else is in the boat.
 
-Drop us a line at **contact@oculix.org** — or sponsor on [GitHub](https://github.com/sponsors/oculix-org) if you'd like to support continued development.
+Drop us a line at [contact@oculix.org](mailto:contact@oculix.org) — or sponsor on [GitHub](https://github.com/sponsors/oculix-org) if you'd like to support continued development.

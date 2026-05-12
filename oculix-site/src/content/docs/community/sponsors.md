@@ -30,7 +30,7 @@ That kind of organic surface area is how this project keeps reaching new contrib
 
 ### Adopt at work, openly
 
-If your team uses OculiX, let us know — even off the record. Knowing which industries lean on the project helps prioritize the roadmap. Email **contact@oculix.org** or open a discussion on GitHub.
+If your team uses OculiX, let us know — even off the record. Knowing which industries lean on the project helps prioritize the roadmap. Email [contact@oculix.org](mailto:contact@oculix.org) or open a discussion on GitHub.
 
 ## Current sponsors
 
@@ -48,7 +48,7 @@ If you're an OSS-friendly patron, foundation, or company that wants to underwrit
 - No expectation of commercial return, no equity, no exit path.
 - Public acknowledgement of the funding is fine and welcome; no other strings.
 
-If that fits your model, write to **contact@oculix.org**. If it doesn't — i.e. you're expecting OculiX to become a paid product — we're not the right project, and we'd rather not waste your time.
+If that fits your model, write to [contact@oculix.org](mailto:contact@oculix.org). If it doesn't — i.e. you're expecting OculiX to become a paid product — we're not the right project, and we'd rather not waste your time.
 
 ## On the spirit of the project
 

@@ -70,4 +70,4 @@ Les marques citées sont la propriété de leurs détenteurs respectifs. L'inclu
 
 Si votre équipe s'appuie sur OculiX en production, on aimerait beaucoup le savoir (même de manière off the record). Ça nous aide à prioriser la roadmap et ça donne aux plus petits adoptants une idée de qui d'autre est embarqué.
 
-Écrivez-nous à **contact@oculix.org** — ou soutenez le projet sur [GitHub Sponsors](https://github.com/sponsors/oculix-org) si vous souhaitez contribuer au développement.
+Écrivez-nous à [contact@oculix.org](mailto:contact@oculix.org) — ou soutenez le projet sur [GitHub Sponsors](https://github.com/sponsors/oculix-org) si vous souhaitez contribuer au développement.

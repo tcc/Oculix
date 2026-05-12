@@ -34,7 +34,7 @@ See also [SECURITY.md](https://github.com/oculix-org/Oculix/blob/master/SECURITY
 
 ### Your team uses OculiX at work → just reach out
 
-If a team, a department, or a whole company is running OculiX in production and wants to **talk to the maintainer directly** — about a specific need, an integration question, a roadmap influence, or just to say hello — email **contact@oculix.org** or open a discussion on GitHub.
+If a team, a department, or a whole company is running OculiX in production and wants to **talk to the maintainer directly** — about a specific need, an integration question, a roadmap influence, or just to say hello — email [contact@oculix.org](mailto:contact@oculix.org) or open a discussion on GitHub.
 
 We're not running an enterprise sales pipeline, but we're also not pretending the project lives in a vacuum. Many of the companies on the [Showcase page](/showcase/) found OculiX through a single engineer's bug report. Real conversations help the project as much as code does.
 
@@ -106,7 +106,7 @@ Where it's worth a conversation first:
 - If your procurement requires a **signed vendor contract**, talk to us about what's possible — the answer today is informal, but it isn't always "no."
 - If you need **SOC 2 / HIPAA / FedRAMP** attestations, the project itself isn't certified — but its architecture (no telemetry, no cloud, no third-party API calls from the runtime) makes it easier to fit into a certified environment you control.
 
-Either way, write to **contact@oculix.org** before you assume it doesn't fit.
+Either way, write to [contact@oculix.org](mailto:contact@oculix.org) before you assume it doesn't fit.
 
 ## Saying thanks
 
