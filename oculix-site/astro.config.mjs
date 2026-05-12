@@ -12,7 +12,7 @@ export default defineConfig({
         alt: 'OculiX gecko logo',
         replacesTitle: false,
       },
-      favicon: '/favicon.svg',
+      favicon: '/favicon.ico',
       customCss: ['./src/styles/custom.css'],
       defaultLocale: 'en',
       locales: {
