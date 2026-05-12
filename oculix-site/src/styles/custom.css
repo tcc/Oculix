@@ -1,0 +1,90 @@
+/* OculiX theme — gecko purple + cyan on deep navy */
+
+:root {
+  --oculix-purple: #a855f7;
+  --oculix-purple-bright: #c084fc;
+  --oculix-cyan: #22d3ee;
+  --oculix-cyan-bright: #67e8f9;
+  --oculix-navy: #0f172a;
+  --oculix-navy-deep: #020617;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #4c1d95;
+  --sl-color-accent: var(--oculix-purple);
+  --sl-color-accent-high: var(--oculix-purple-bright);
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #e2e8f0;
+  --sl-color-gray-2: #cbd5e1;
+  --sl-color-gray-3: #94a3b8;
+  --sl-color-gray-4: #475569;
+  --sl-color-gray-5: #1e293b;
+  --sl-color-gray-6: #0f172a;
+  --sl-color-black: #020617;
+  --sl-color-bg-nav: rgba(15, 23, 42, 0.85);
+  --sl-color-bg-sidebar: var(--oculix-navy-deep);
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #ede9fe;
+  --sl-color-accent: #7c3aed;
+  --sl-color-accent-high: #5b21b6;
+}
+
+/* Hero gecko glow on landing */
+.hero img {
+  filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.35))
+          drop-shadow(0 0 60px rgba(34, 211, 238, 0.2));
+}
+
+/* CTAs */
+.sl-link-button[data-variant='primary'] {
+  background: linear-gradient(135deg, var(--oculix-purple) 0%, var(--oculix-cyan) 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.sl-link-button[data-variant='primary']:hover {
+  filter: brightness(1.1);
+}
+
+/* Subtle gecko-spot accent under headings */
+.sl-markdown-content h2 {
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  padding-bottom: 0.3em;
+}
+
+/* Stats grid on landing */
+.oculix-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.oculix-stat {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(34, 211, 238, 0.05));
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.oculix-stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--oculix-purple-bright), var(--oculix-cyan-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+}
+
+.oculix-stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--sl-color-gray-2);
+  margin-top: 0.3rem;
+}

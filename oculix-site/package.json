@@ -1,7 +1,9 @@
 {
-  "name": "gullible-galaxy",
+  "name": "oculix-site",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Official website for OculiX — Visual Intelligence automation.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

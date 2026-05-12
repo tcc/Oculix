@@ -1,0 +1,76 @@
+---
+title: OculiX
+description: Visual Intelligence automation. See what humans see, automate what humans do.
+template: splash
+hero:
+  tagline: Visual Intelligence automation. See what humans see, automate what humans do.
+  image:
+    file: ../../../assets/oculix-hero.png
+    alt: OculiX gecko mascot
+  actions:
+    - text: Get Started
+      link: /en/getting-started/installation/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/oculix-org/Oculix
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Trusted in production
+
+<div class="oculix-stats">
+  <div class="oculix-stat">
+    <span class="oculix-stat-value">91</span>
+    <span class="oculix-stat-label">enterprise organizations</span>
+  </div>
+  <div class="oculix-stat">
+    <span class="oculix-stat-value">14k+</span>
+    <span class="oculix-stat-label">clones every two weeks</span>
+  </div>
+  <div class="oculix-stat">
+    <span class="oculix-stat-value">3.4k</span>
+    <span class="oculix-stat-label">Maven downloads / quarter</span>
+  </div>
+  <div class="oculix-stat">
+    <span class="oculix-stat-value">Apache 2.0</span>
+    <span class="oculix-stat-label">open source, forever</span>
+  </div>
+</div>
+
+## What is OculiX?
+
+**OculiX is a visual automation IDE** that drives any GUI by what it looks like — not by accessibility hooks, DOM selectors, or fragile XPaths. It sees the screen the way a human does, then clicks, types, and reads exactly where it should.
+
+Forked from the long-standing SikuliX project and re-engineered around an embedded OCR stack, a modern vision pipeline, and a clean Jython scripting layer, OculiX is what visual testing should have been in 2026.
+
+<CardGrid stagger>
+  <Card title="Pixel-perfect matching" icon="seti:image">
+    Find any region of any window by sample image. Resolution-aware, similarity-tunable, sub-pixel reliable.
+  </Card>
+  <Card title="OCR out of the box" icon="document">
+    Tesseract is **embedded** via Legerix — no manual install. PaddleOCR available as an opt-in HTTP server for high-accuracy CJK and complex layouts.
+  </Card>
+  <Card title="Cross-platform" icon="laptop">
+    Windows, macOS, Linux. One script runs everywhere — no platform-specific selectors.
+  </Card>
+  <Card title="Jython scripting" icon="seti:python">
+    Python 2.7 syntax with full JVM interop. Drop-in compatible with legacy SikuliX scripts.
+  </Card>
+  <Card title="Vision pipeline" icon="puzzle">
+    Modern computer-vision primitives (template, feature, contour) composable from the IDE or from code.
+  </Card>
+  <Card title="Vendor-of-record support" icon="approve-check">
+    Open source for everyone. Commercial support and compliance contracts available for regulated industries.
+  </Card>
+</CardGrid>
+
+## Where to next?
+
+<LinkCard title="Install OculiX" href="/en/getting-started/installation/" description="Get up and running in under 5 minutes." />
+<LinkCard title="Your first script" href="/en/getting-started/first-script/" description="Click a button by looking at it. The OculiX hello world." />
+<LinkCard title="OCR & text recognition" href="/en/guides/ocr/" description="Read text on screen with Tesseract or PaddleOCR." />
+<LinkCard title="Enterprise support" href="/en/support/enterprise/" description="SLAs, vendor-of-record contracts, compliance." />
