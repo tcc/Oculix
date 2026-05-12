@@ -14,9 +14,9 @@ export default defineConfig({
       },
       favicon: '/favicon.ico',
       customCss: ['./src/styles/custom.css'],
-      defaultLocale: 'en',
+      defaultLocale: 'root',
       locales: {
-        en: { label: 'English', lang: 'en' },
+        root: { label: 'English', lang: 'en' },
         fr: { label: 'Français', lang: 'fr' },
       },
       social: [
