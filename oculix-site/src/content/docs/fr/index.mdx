@@ -18,7 +18,16 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard, Code } from '@astrojs/starlight/components';
+
+export const heroCode = `# Ouvre l'app, exporte le rapport du jour, sauvegarde — chaque matin à 8h.
+from oculix import click, type, wait
+
+click("file_menu.png")
+click("export_to_csv.png")
+wait("save_dialog.png", timeout=10)
+type("filename_field.png", "rapport_du_jour.csv")
+click("save_button.png")`;
 
 <div class="oculix-code-window">
   <div class="oculix-code-header">
@@ -27,14 +36,7 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
     <span class="oculix-code-dot g"></span>
     <span class="oculix-code-title">export_quotidien.py — OculiX</span>
   </div>
-  <pre class="oculix-code-body"><span class="com"># Ouvre l'app, exporte le rapport du jour, sauvegarde — chaque matin à 8h.</span>
-<span class="kw">from</span> oculix <span class="kw">import</span> <span class="fn">click</span>, <span class="fn">type</span>, <span class="fn">wait</span>
-{'\n'}
-<span class="fn">click</span>(<span class="str">"file_menu.png"</span>)
-<span class="fn">click</span>(<span class="str">"export_to_csv.png"</span>)
-<span class="fn">wait</span>(<span class="str">"save_dialog.png"</span>, timeout=<span class="str">10</span>)
-<span class="fn">type</span>(<span class="str">"filename_field.png"</span>, <span class="str">"rapport_du_jour.csv"</span>)
-<span class="fn">click</span>(<span class="str">"save_button.png"</span>)</pre>
+  <Code code={heroCode} lang="py" />
 </div>
 
 ## Adopté en production

@@ -158,18 +158,27 @@ body::after {
   font-family: var(--sl-font, system-ui);
 }
 
-.oculix-code-body {
-  padding: 1rem 1.25rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: #e2e8f0;
-  overflow-x: auto;
+.oculix-code-window .expressive-code,
+.oculix-code-window pre.astro-code,
+.oculix-code-window pre[class*='language-'] {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.oculix-code-body .kw { color: #c084fc; }
-.oculix-code-body .fn { color: #67e8f9; }
-.oculix-code-body .str { color: #a3e635; }
-.oculix-code-body .com { color: #64748b; font-style: italic; }
+.oculix-code-window .expressive-code .frame {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.oculix-code-window .expressive-code pre,
+.oculix-code-window pre.astro-code {
+  padding: 1rem 1.25rem !important;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
 
 /* ─────────────────────────────────────────────────────────────
    Stats grid
