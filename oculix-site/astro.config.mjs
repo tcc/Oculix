@@ -64,10 +64,11 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Support',
-          translations: { fr: 'Support' },
+          label: 'Help',
+          translations: { fr: 'Aide' },
           items: [
-            { slug: 'support/enterprise' },
+            { slug: 'support/enterprise', label: 'Getting help', translations: { fr: 'Obtenir de l\'aide' } },
+            { slug: 'showcase', label: 'Adoption & showcase', translations: { fr: 'Adoption & vitrine' } },
           ],
         },
       ],
