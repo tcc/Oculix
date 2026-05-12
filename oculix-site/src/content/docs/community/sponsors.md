@@ -38,6 +38,18 @@ A heartfelt thank you to everyone supporting the project. The list of named spon
 
 If you've ever opened an issue or commented on a PR, you're already on the list — just not the one with the badge.
 
+## Angels & patrons — OSS only
+
+OculiX has zero commercial trajectory. There's no SaaS to be built, no paid tier to ship, no exit to engineer. **But we're not against angels** — backers who fund open source projects because they believe in keeping good tools free and well-maintained.
+
+If you're an OSS-friendly patron, foundation, or company that wants to underwrite continued maintenance, an integration, a translation push, or a multi-month roadmap of features that stay public, **we're open to talking**. The conditions are simple:
+
+- Everything funded **ships in the public repo**, under MIT, available to everyone — no private forks, no paid tiers.
+- No expectation of commercial return, no equity, no exit path.
+- Public acknowledgement of the funding is fine and welcome; no other strings.
+
+If that fits your model, write to **contact@oculix.org**. If it doesn't — i.e. you're expecting OculiX to become a paid product — we're not the right project, and we'd rather not waste your time.
+
 ## On the spirit of the project
 
 OculiX is MIT-licensed, which legally lets you do almost anything — including commercial use, including rebranding, including building products on top of it. We mean that genuinely: **if OculiX helps you make something, we're happy.** Use it at work, ship it inside your product, embed it in a paid service. That's what the license is for.
