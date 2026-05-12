@@ -23,8 +23,7 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/oculix-org/Oculix' },
       ],
       editLink: {
-        baseUrl: 'https://github.com/oculix-org/Oculix/edit/master/oculix-site/',
-      },
+        baseUrl: 'https://github.com/oculix-org/oculix-site/edit/master/',      },
       sidebar: [
         {
           label: 'Getting Started',
