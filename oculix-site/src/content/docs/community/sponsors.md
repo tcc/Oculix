@@ -40,9 +40,16 @@ If you've ever opened an issue or commented on a PR, you're already on the list 
 
 ## On the spirit of the project
 
-OculiX has no commercial purpose. The license is MIT, which legally permits commercial reuse — but the **spirit** of the project is that nobody profits from it as a product. If you rebrand and sell OculiX as your own without contributing anything back, you're technically within the law, but the world is small and the open-source community is smaller.
+OculiX is MIT-licensed, which legally lets you do almost anything — including commercial use, including rebranding, including building products on top of it. We mean that genuinely: **if OculiX helps you make something, we're happy.** Use it at work, ship it inside your product, embed it in a paid service. That's what the license is for.
 
-We'd rather you joined the contributors list.
+What we'd love in return, when it makes sense:
+
+- Keep the link to the upstream project somewhere visible (a footer, an about page, a README)
+- Open an issue or a PR when you find something — even a small fix
+- Let us know you're using it, even off the record, so the project knows it's useful
+- If a feature you've built is genuinely upstreamable, send it back as a PR
+
+We aren't going to police anyone's usage. The MIT license is the contract — everything else is good faith. So far, good faith has been the rule, not the exception.
 
 ## Thank you
 

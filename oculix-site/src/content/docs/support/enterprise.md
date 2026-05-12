@@ -1,11 +1,11 @@
 ---
 title: Getting help
-description: How to ask for help with OculiX — community channels, what to expect.
+description: How to ask for help with OculiX — community channels, what to expect, and the door we keep open for organizations.
 ---
 
-OculiX is free and open source under MIT. The project has no commercial offering — there is no paid support tier, no SLA, no priority hotline. Everything happens in public, on GitHub, where the rest of the project lives.
+OculiX is free and open source under MIT. It isn't built as a commercial product, there's no SaaS, no usage tracking, no paid SLA out of the box. But none of that means **closed** — if your team is using OculiX seriously, we want to hear about it, and we'll do what we can.
 
-If your team needs OculiX to be reliable in production, the best thing you can do is **read the docs, test on RCs, and report bugs early** — that's what keeps the project healthy.
+This page explains where to ask, what to expect, and how the door stays open.
 
 ## Where to ask
 
@@ -32,6 +32,12 @@ For anything sensitive (auth bypass, RCE, credential leakage in logs), **do not 
 
 See also [SECURITY.md](https://github.com/oculix-org/Oculix/blob/master/SECURITY.md).
 
+### Your team uses OculiX at work → just reach out
+
+If a team, a department, or a whole company is running OculiX in production and wants to **talk to the maintainer directly** — about a specific need, an integration question, a roadmap influence, or just to say hello — email **contact@oculix.org** or open a discussion on GitHub.
+
+We're not running an enterprise sales pipeline, but we're also not pretending the project lives in a vacuum. Many of the companies on the [Showcase page](/showcase/) found OculiX through a single engineer's bug report. Real conversations help the project as much as code does.
+
 ## What to expect
 
 OculiX is currently maintained by one person, on personal time. The realistic numbers:
@@ -42,15 +48,26 @@ OculiX is currently maintained by one person, on personal time. The realistic nu
 | `FindFailed` you can repro | A week                            |
 | Feature request            | Triaged within a week — implementation timeline varies wildly |
 | Security advisory          | Acknowledged within 48 hours      |
+| Email from an organization | Read within a few days, replied within a week |
 
 Major bugs get same-day fixes when they're reproducible. Speculative bugs ("sometimes it doesn't click") take longer because they need a reliable repro first.
 
-## Things we don't do
+## How far we can go for an organization
 
-- **No paid support contracts.** If your procurement department needs a vendor-of-record, OculiX is not the right tool for that need.
-- **No phone hotline.** Everything is asynchronous, on GitHub, in public.
-- **No private patches.** All bug fixes land in the next public RC. If you need a fix before then, build from source.
-- **No bespoke consulting.** The maintainer's day job is unrelated; OculiX is not the front for a services business.
+OculiX is a small project, not a vendor. But "small" doesn't mean "no" — it means everything is case-by-case, asynchronous, and decided in conversation. Things that have actually happened:
+
+- **A specific bug got prioritized** because a team explained the production impact in a clear issue. That's usually all it takes.
+- **A feature got built** because an organization sponsored the maintainer's time to focus on it. No tier, no contract — a discussion and a GitHub Sponsors arrangement.
+- **A custom audit / training session** was put together for a team that needed to onboard several engineers at once. Off the books, agreed by email.
+- **A patch shipped to `master` faster than the normal RC cycle** because a regulated industry hit it and provided a clean repro.
+
+What we won't do:
+
+- Run a formal vendor-of-record contract with a procurement department — there is no legal entity behind the project for that, today.
+- Promise an SLA we can't keep with one maintainer.
+- Develop a feature in private without it landing back in the public project.
+
+In short: **if you have a real need, write to us before you assume it's impossible.** The honest answer is often "yes, here's how" or "yes, with this caveat" — not "no."
 
 ## Things you can do yourself
 
@@ -74,23 +91,22 @@ OculiX is MIT-licensed. Fork it, patch the issue you care about, run your own bu
 
 The fastest way to know a fix is out: watch the repo. **GitHub → Watch → Custom → Releases.** You get an email for every new RC and stable.
 
-## On dependencies for regulated industries
+## Auditability & regulated environments
 
-OculiX runs entirely on your machine. Nothing phones home, nothing sends telemetry, no analytics, no auto-update. The MCP server (separate optional module) writes an Ed25519-signed JSONL audit journal designed for environments where every action needs to be auditable.
+OculiX runs entirely on your machine. Nothing phones home, nothing sends telemetry, no analytics, no auto-update. The optional MCP server module writes an Ed25519-signed, SHA-256-chained JSONL audit journal — designed for environments where every action needs to be auditable.
 
-What OculiX is **not**:
+Where OculiX fits well:
 
-- A SOC 2 / HIPAA / FedRAMP-certified product (no vendor to certify)
-- A turnkey procurement vehicle (no commercial entity behind it)
-- A support-backed dependency (the maintainer is one human)
+- **Self-hosted, source-available** code under a permissive license
+- **Auditable end-to-end** — you can read every line that runs in your build
+- **No vendor lock-in** — fork it the day the maintainer disappears
 
-What OculiX **is**:
+Where it's worth a conversation first:
 
-- Source-available code under a permissive license
-- Auditable end-to-end (you can read every line that runs in your build)
-- Free of vendor lock-in (you fork it the day the maintainer disappears)
+- If your procurement requires a **signed vendor contract**, talk to us about what's possible — the answer today is informal, but it isn't always "no."
+- If you need **SOC 2 / HIPAA / FedRAMP** attestations, the project itself isn't certified — but its architecture (no telemetry, no cloud, no third-party API calls from the runtime) makes it easier to fit into a certified environment you control.
 
-For organizations that need a vendor on the other end of the contract, OculiX is probably the wrong choice. For organizations that can absorb a self-hosted, source-available tool — and there are many — OculiX fits.
+Either way, write to **contact@oculix.org** before you assume it doesn't fit.
 
 ## Saying thanks
 
@@ -100,6 +116,6 @@ If OculiX saved you time and you'd like to give back, the most useful things are
 - A PR for a fix you've already made locally
 - Testing an RC on a platform we don't have
 - Translating UI strings into your language
-- A sponsorship on [GitHub Sponsors](https://github.com/sponsors/julienmerconsulting) — see [Sponsors](/community/sponsors/)
+- Letting us cite your organization on the [Showcase page](/showcase/) — or sponsoring on [GitHub Sponsors](https://github.com/sponsors/julienmerconsulting) (see [Sponsors](/community/sponsors/))
 
-We'd rather you joined the contributors list than wrote a check.
+We'd love both — a contributor entry **and** a sponsor entry. Either alone is already a huge help.
