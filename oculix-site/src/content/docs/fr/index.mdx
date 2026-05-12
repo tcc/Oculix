@@ -20,6 +20,23 @@ hero:
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
+<div class="oculix-code-window">
+  <div class="oculix-code-header">
+    <span class="oculix-code-dot r"></span>
+    <span class="oculix-code-dot y"></span>
+    <span class="oculix-code-dot g"></span>
+    <span class="oculix-code-title">export_quotidien.py — OculiX</span>
+  </div>
+  <pre class="oculix-code-body"><span class="com"># Ouvre l'app, exporte le rapport du jour, sauvegarde — chaque matin à 8h.</span>
+<span class="kw">from</span> oculix <span class="kw">import</span> <span class="fn">click</span>, <span class="fn">type</span>, <span class="fn">wait</span>
+
+<span class="fn">click</span>(<span class="str">"file_menu.png"</span>)
+<span class="fn">click</span>(<span class="str">"export_to_csv.png"</span>)
+<span class="fn">wait</span>(<span class="str">"save_dialog.png"</span>, timeout=<span class="str">10</span>)
+<span class="fn">type</span>(<span class="str">"filename_field.png"</span>, <span class="str">"rapport_du_jour.csv"</span>)
+<span class="fn">click</span>(<span class="str">"save_button.png"</span>)</pre>
+</div>
+
 ## Adopté en production
 
 <div class="oculix-stats">
@@ -43,9 +60,11 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## Qu'est-ce qu'OculiX ?
 
-**OculiX est un IDE d'automatisation visuelle** qui pilote n'importe quelle interface graphique par ce qu'elle affiche — sans hooks d'accessibilité, sans sélecteurs DOM, sans XPath fragiles. Il voit l'écran comme un humain, puis clique, tape et lit exactement au bon endroit.
+**OculiX est un IDE d'automatisation visuelle pour tout le monde.** Il pilote n'importe quelle interface graphique par ce qu'elle affiche — sans hooks d'accessibilité, sans sélecteurs DOM, sans XPath fragiles. Vous pointez ce que vous voyez à l'écran, OculiX fait le reste.
 
-Fork du projet historique SikuliX, ré-architecturé autour d'un OCR embarqué, d'un pipeline de vision moderne et d'une couche de scripting Jython propre, OculiX est ce que les tests visuels auraient dû être en 2026.
+Pas besoin d'être développeur pour s'en servir. Si vous savez prendre une capture d'écran, vous savez écrire votre premier script OculiX. Et si vous _êtes_ développeur, vous avez en plus un environnement complet avec une syntaxe Python et l'interop JVM.
+
+Fork du projet historique **SikuliX** — et construit dans le même esprit : *l'automatisation visuelle doit être simple, accessible, et la vôtre.*
 
 <CardGrid stagger>
   <Card title="Reconnaissance pixel-perfect" icon="seti:image">
@@ -67,6 +86,124 @@ Fork du projet historique SikuliX, ré-architecturé autour d'un OCR embarqué, 
     Open source pour tous. Support commercial et contrats de conformité disponibles pour les secteurs régulés.
   </Card>
 </CardGrid>
+
+## Ce que les gens font avec OculiX
+
+OculiX n'a pas été conçu pour un seul usage — il est conçu pour **tout** ce que vous faites de répétitif à l'écran.
+
+<CardGrid>
+  <Card title="Automatiser des tâches répétitives" icon="rocket">
+    Exporter, convertir, renommer, remplir cent fois le même formulaire. OculiX clique où vous cliqueriez, tape ce que vous taperiez.
+  </Card>
+  <Card title="Enregistrer démos et tutoriels" icon="seti:video">
+    Reproduire la même séquence à l'écran autant de fois que nécessaire — démos produit, vidéos de formation, supports d'onboarding.
+  </Card>
+  <Card title="Aider en accessibilité" icon="heart">
+    Déclencher des workflows personnalisés dans n'importe quelle app via un raccourci. Aucune API d'accessibilité requise.
+  </Card>
+  <Card title="Migrer ou éditer des données en masse" icon="seti:db">
+    Piloter des logiciels legacy sans API ni CLI. Si un humain peut cliquer dedans, OculiX aussi.
+  </Card>
+  <Card title="Tester comme un utilisateur" icon="approve-check">
+    Oui — la QA marche aussi. Mais OculiX n'a pas été conçu pour rivaliser avec les outils QA, il a été conçu pour libérer chacun du clic répétitif.
+  </Card>
+  <Card title="Construire son propre bot RPA" icon="puzzle">
+    Pas de lock-in éditeur, pas d'abonnement SaaS, pas de coût par bot. Votre script tourne sur votre machine, point.
+  </Card>
+</CardGrid>
+
+## Comment on se positionne
+
+OculiX se situe dans le domaine de l'**automatisation de processus**, aux côtés des outils RPA et d'automatisation visuelle. Voici comment il se compare à deux alternatives commerciales bien connues.
+
+<table class="oculix-compare">
+  <thead>
+    <tr>
+      <th>Capacité</th>
+      <th class="oculix-col">OculiX</th>
+      <th>UiPath</th>
+      <th>Eggplant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Licence & coût</td>
+      <td class="oculix-yes">Apache 2.0 — gratuit, pour toujours</td>
+      <td>Commercial · par bot / par utilisateur</td>
+      <td>Commercial · licence entreprise</td>
+    </tr>
+    <tr>
+      <td>Auto-hébergé, 100 % local</td>
+      <td class="oculix-yes">Tout en local, aucun cloud requis</td>
+      <td class="oculix-meh">Hybride (Studio local, Orchestrator cloud)</td>
+      <td class="oculix-yes">On-prem disponible</td>
+    </tr>
+    <tr>
+      <td>Multi-plateforme</td>
+      <td class="oculix-yes">Windows · macOS · Linux</td>
+      <td class="oculix-meh">Studio uniquement sous Windows</td>
+      <td class="oculix-yes">Windows · macOS · Linux</td>
+    </tr>
+    <tr>
+      <td>Approche</td>
+      <td>Vision pure — voit l'écran</td>
+      <td>Sélecteurs UI (UIA / HTML) + repli visuel</td>
+      <td>Visuel + IDE</td>
+    </tr>
+    <tr>
+      <td>OCR embarqué</td>
+      <td class="oculix-yes">Tesseract inclus</td>
+      <td class="oculix-meh">Plusieurs fournisseurs via marketplace</td>
+      <td class="oculix-yes">Intégré</td>
+    </tr>
+    <tr>
+      <td>IDE intégré</td>
+      <td class="oculix-yes">Oui</td>
+      <td class="oculix-yes">Oui (Studio)</td>
+      <td class="oculix-yes">Oui</td>
+    </tr>
+    <tr>
+      <td>Langage de script</td>
+      <td>Jython (Python 2.7 + JVM)</td>
+      <td>VB.NET · C# · Python (limité)</td>
+      <td>SenseTalk</td>
+    </tr>
+    <tr>
+      <td>Cas d'usage idéal</td>
+      <td>Tout le monde — du non-tech à l'entreprise</td>
+      <td>RPA d'entreprise à grande échelle</td>
+      <td>Automatisation & tests visuels en secteur régulé</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="oculix-adopter-disclaimer">
+  Comparatif basé sur la documentation publique de chaque éditeur en 2026. OculiX est indépendant et n'a aucune affiliation avec UiPath (UiPath, Inc.) ni Eggplant (Keysight Technologies).
+</p>
+
+## Utilisé par les équipes de
+
+<div class="oculix-adopters">
+  <div class="oculix-adopter">IBM</div>
+  <div class="oculix-adopter">Qualcomm</div>
+  <div class="oculix-adopter">Tencent</div>
+  <div class="oculix-adopter">Alibaba</div>
+  <div class="oculix-adopter">Kakao</div>
+  <div class="oculix-adopter">Deutsche Bank</div>
+  <div class="oculix-adopter">PepsiCo</div>
+  <div class="oculix-adopter">Dassault Systèmes</div>
+  <div class="oculix-adopter">Kaspersky</div>
+  <div class="oculix-adopter">Synopsys</div>
+  <div class="oculix-adopter">Neo4j</div>
+  <div class="oculix-adopter">Zscaler</div>
+  <div class="oculix-adopter">Jack Henry</div>
+  <div class="oculix-adopter">RSA Security</div>
+  <div class="oculix-adopter">Bill.com</div>
+  <div class="oculix-adopter">University of Alberta</div>
+</div>
+<p class="oculix-adopter-disclaimer">
+  Organisations ayant téléchargé OculiX via Maven Central de manière vérifiée. Noms cités à titre informatif uniquement — aucune approbation, partenariat ou affiliation n'est sous-entendu. Voir la <a href="/fr/showcase/">page d'adoption complète</a>.
+</p>
 
 ## Pour aller plus loin
 

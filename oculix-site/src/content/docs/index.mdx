@@ -25,17 +25,16 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
     <span class="oculix-code-dot r"></span>
     <span class="oculix-code-dot y"></span>
     <span class="oculix-code-dot g"></span>
-    <span class="oculix-code-title">login_test.py — OculiX</span>
+    <span class="oculix-code-title">daily_export.py — OculiX</span>
   </div>
-  <pre class="oculix-code-body"><span class="com"># Open the app, log in, and verify the home screen — by looking at it.</span>
-<span class="kw">from</span> oculix <span class="kw">import</span> <span class="fn">Screen</span>, <span class="fn">find</span>, <span class="fn">click</span>, <span class="fn">type</span>, <span class="fn">exists</span>
+  <pre class="oculix-code-body"><span class="com"># Open the app, export today's report, save it — every morning at 8 AM.</span>
+<span class="kw">from</span> oculix <span class="kw">import</span> <span class="fn">click</span>, <span class="fn">type</span>, <span class="fn">wait</span>
 
-<span class="fn">click</span>(<span class="str">"login_button.png"</span>)
-<span class="fn">type</span>(<span class="str">"username_field.png"</span>, <span class="str">"alice"</span>)
-<span class="fn">type</span>(<span class="str">"password_field.png"</span>, <span class="str">"hunter2"</span>)
-<span class="fn">click</span>(<span class="str">"submit.png"</span>)
-
-<span class="kw">assert</span> <span class="fn">exists</span>(<span class="str">"welcome_alice.png"</span>, timeout=<span class="str">5</span>), <span class="str">"Login failed"</span></pre>
+<span class="fn">click</span>(<span class="str">"file_menu.png"</span>)
+<span class="fn">click</span>(<span class="str">"export_to_csv.png"</span>)
+<span class="fn">wait</span>(<span class="str">"save_dialog.png"</span>, timeout=<span class="str">10</span>)
+<span class="fn">type</span>(<span class="str">"filename_field.png"</span>, <span class="str">"report_today.csv"</span>)
+<span class="fn">click</span>(<span class="str">"save_button.png"</span>)</pre>
 </div>
 
 ## Trusted in production
@@ -61,9 +60,11 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## What is OculiX?
 
-**OculiX is a visual automation IDE** that drives any GUI by what it looks like — not by accessibility hooks, DOM selectors, or fragile XPaths. It sees the screen the way a human does, then clicks, types, and reads exactly where it should.
+**OculiX is a visual automation IDE for everyone.** It drives any graphical interface by what it looks like — not by accessibility hooks, DOM selectors, or fragile XPaths. You point at what you see on screen, OculiX does the rest.
 
-Forked from the long-standing SikuliX project and re-engineered around an embedded OCR stack, a modern vision pipeline, and a clean Jython scripting layer, OculiX is what visual testing should have been in 2026.
+You don't need to be a developer to use it. If you can take a screenshot, you can write your first OculiX script. If you _are_ a developer, you get a full scripting environment with Python syntax and JVM interop on top.
+
+Forked from the long-standing **SikuliX** project — and built in the same spirit: *visual automation should be simple, accessible, and yours.*
 
 <CardGrid stagger>
   <Card title="Pixel-perfect matching" icon="seti:image">
@@ -85,6 +86,100 @@ Forked from the long-standing SikuliX project and re-engineered around an embedd
     Open source for everyone. Commercial support and compliance contracts available for regulated industries.
   </Card>
 </CardGrid>
+
+## What people do with OculiX
+
+OculiX isn't built for one use case — it's built for **any** repetitive thing you do on a screen.
+
+<CardGrid>
+  <Card title="Automate tedious workflows" icon="rocket">
+    Export, convert, rename, fill the same form a hundred times. OculiX clicks where you'd click, types what you'd type.
+  </Card>
+  <Card title="Record demos & tutorials" icon="seti:video">
+    Reproduce the same on-screen sequence as many times as you need — for product demos, training videos, or onboarding decks.
+  </Card>
+  <Card title="Help people with accessibility needs" icon="heart">
+    Trigger custom workflows in any app from a single shortcut. No accessibility API required.
+  </Card>
+  <Card title="Migrate or mass-edit data" icon="seti:db">
+    Drive legacy software that has no API or CLI. If a human can click through it, OculiX can too.
+  </Card>
+  <Card title="Test apps the way users see them" icon="approve-check">
+    Yes — QA works too. But OculiX wasn't built to compete with QA tools, it was built to free anyone from clicking buttons.
+  </Card>
+  <Card title="Build your own RPA bot" icon="puzzle">
+    No vendor-lock-in, no SaaS subscription, no per-bot fee. Your script runs on your machine, period.
+  </Card>
+</CardGrid>
+
+## How it compares
+
+OculiX sits in the **process automation** space alongside RPA and visual automation tools. Here's how it lines up with two well-known commercial alternatives.
+
+<table class="oculix-compare">
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th class="oculix-col">OculiX</th>
+      <th>UiPath</th>
+      <th>Eggplant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>License & cost</td>
+      <td class="oculix-yes">Apache 2.0 — free forever</td>
+      <td>Commercial · per-bot / per-user</td>
+      <td>Commercial · enterprise license</td>
+    </tr>
+    <tr>
+      <td>Self-hosted, fully local</td>
+      <td class="oculix-yes">100 % local, no cloud needed</td>
+      <td class="oculix-meh">Hybrid (Studio local, Orchestrator cloud)</td>
+      <td class="oculix-yes">On-prem available</td>
+    </tr>
+    <tr>
+      <td>Cross-platform</td>
+      <td class="oculix-yes">Windows · macOS · Linux</td>
+      <td class="oculix-meh">Studio is Windows-only</td>
+      <td class="oculix-yes">Windows · macOS · Linux</td>
+    </tr>
+    <tr>
+      <td>Approach</td>
+      <td>Pure visual — sees the screen</td>
+      <td>UI selectors (UIA / HTML) + visual fallback</td>
+      <td>Visual + IDE</td>
+    </tr>
+    <tr>
+      <td>Embedded OCR</td>
+      <td class="oculix-yes">Tesseract bundled</td>
+      <td class="oculix-meh">Multiple providers via marketplace</td>
+      <td class="oculix-yes">Built-in</td>
+    </tr>
+    <tr>
+      <td>Bundled IDE</td>
+      <td class="oculix-yes">Yes</td>
+      <td class="oculix-yes">Yes (Studio)</td>
+      <td class="oculix-yes">Yes</td>
+    </tr>
+    <tr>
+      <td>Scripting language</td>
+      <td>Jython (Python 2.7 + JVM)</td>
+      <td>VB.NET · C# · Python (limited)</td>
+      <td>SenseTalk</td>
+    </tr>
+    <tr>
+      <td>Best fit</td>
+      <td>Anyone — from non-tech users to enterprise teams</td>
+      <td>Enterprise RPA at scale</td>
+      <td>Visual automation & test for regulated industries</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="oculix-adopter-disclaimer">
+  Comparison based on each vendor's public documentation as of 2026. OculiX is independent and unaffiliated with UiPath (UiPath, Inc.) or Eggplant (Keysight Technologies).
+</p>
 
 ## Adopted by teams at
 
